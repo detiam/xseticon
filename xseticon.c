@@ -43,13 +43,13 @@ gboolean verbose = FALSE;
 
 void usage(int exitcode)
 {
-  printf("usage: %s [options] path/to/icon.png\n", program_name);
+  printf("usage: %s [options] path/to/icon\n", program_name);
   printf("options:\n");
   printf("  -name <text>    : apply icon to the window of the name supplied\n");
   printf("  -id <windowid>  : apply icon to the window id supplied\n");
   printf("  -class <text>   : apply icon to the window matching the class supplied\n");
   printf("\n");
-  printf("Sets the window icon to the specified .png image. The image is loaded from\n");
+  printf("Sets the window icon to the specified image. The image is loaded from\n");
   printf("the file at runtime and sent to the X server; thereafter the file does not\n");
   printf("need to exist, and can be deleted/renamed/modified without the X server or\n");
   printf("window manager noticing.\n");
@@ -57,7 +57,7 @@ void usage(int exitcode)
   printf("selected using the cursor.\n");
   printf("\n");
   printf("Hints:\n");
-  printf("  %s -id \"$WINDOWID\" path/to/icon.png\n", program_name);
+  printf("  %s -id \"$WINDOWID\" path/to/icon\n", program_name);
   printf("Will set the icon for an xterm.\n");
   exit(exitcode);
 }
